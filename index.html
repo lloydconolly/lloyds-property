@@ -229,6 +229,14 @@ nav a:hover{border-color:var(--ink)}
 .hero-img .sky{position:absolute;inset:0;width:100%;height:100%;display:block;opacity:0;transition:opacity .8s ease}
 .hero-img .sky.on{opacity:1}
 .hero-img::after{content:"";position:absolute;inset:0;background:url(images/hero-building.webp) right bottom/cover no-repeat;pointer-events:none}
+.hero-img.has-xhair{cursor:none}
+.xhair{position:absolute;inset:0;z-index:2;pointer-events:none;opacity:0;transition:opacity .2s ease-in-out}
+.xhair.on{opacity:1}
+.xhair span{position:absolute;top:0;left:0;will-change:transform}
+.xhair .xv{width:1px;height:100%;margin-left:-.5px;background:rgba(255,255,255,.7)}
+.xhair .xh{height:1px;width:100%;margin-top:-.5px;background:rgba(255,255,255,.7)}
+.xhair .xd{width:12px;height:12px;margin:-6px 0 0 -6px;border-radius:50%;background:var(--stone)}
+.xhair .xl{font-family:var(--label);font-size:.7rem;letter-spacing:.06em;line-height:1;white-space:pre;color:#1b2c44;background:#fff;padding:4px 6px;border-radius:1px}
 .hero-panel{background:var(--surface);display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:2.5rem clamp(1.5rem,3.5vw,3.5rem);min-width:0}
 .hero-panel .ul{border-bottom:1px solid var(--ink);padding-bottom:3px;color:var(--ink)}
 .hero h1{font-size:clamp(1.45rem,2.3vw,2rem);line-height:1.3;max-width:none;margin-top:1.4rem}
@@ -410,5 +418,6 @@ nav a:hover{border-color:var(--ink)}
 </script>
 
 <script src="clouds.js" defer></script>
+<script src="cursor.js" defer></script>
 </body>
 </html>
